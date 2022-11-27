@@ -90,5 +90,5 @@ def put_amenity(amenity_id):
     for key, value in data.items():
         if key not in ignore:
             setattr(amenity, key, value)
-    storage.save()
-    return make_response(jsonify(amenity.to_dict()), 200)
+    storage.save()   
+ return make_response(jsonify(amenity.to_dict()), 200)

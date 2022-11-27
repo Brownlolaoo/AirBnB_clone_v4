@@ -90,6 +90,6 @@ def put_user(user_id):
     data = request.get_json()
     for key, value in data.items():
         if key not in ignore:
-            setattr(user, key, value)
+             setattr(user, key, value)
     storage.save()
     return make_response(jsonify(user.to_dict()), 200)
